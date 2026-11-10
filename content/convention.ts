@@ -2,6 +2,8 @@
  * CONVENTION 2027 (একাশিয়ান মিলনমেলা–২০২৭) — everything on /convention-2027 comes from here.
  * Source of truth for registration: https://81an.agamievent.org
  */
+import { registeredCount } from "./registered";
+
 export const REG_SITE = "https://81an.agamievent.org";
 
 export const convention = {
@@ -48,7 +50,8 @@ export const convention = {
 
   /** Leave null until the organisers publish numbers */
   expectedParticipants: null as number | null,
-  registeredCount: null as number | null,
+  /** Names on the published list (see content/registered.ts) — as of 9 Nov 2026 */
+  registeredCount: registeredCount as number | null,
 
   /** Leave empty until guests are announced — the site shows "to be announced" */
   guests: {

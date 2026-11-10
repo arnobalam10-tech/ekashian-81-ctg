@@ -42,10 +42,18 @@ export default async function NewsDetail({ params }: P) {
             </span>
           </div>
           <h1 className="mt-5 text-balance text-3xl font-bold sm:text-5xl">{t(n.title, lang)}</h1>
+          {n.author && <p className="mt-4 text-lg text-white/80">— {t(n.author, lang)}</p>}
         </div>
       </section>
       <article className="px-4 py-14 sm:px-6">
         <div className="mx-auto max-w-3xl">
+          {n.cover && (
+            <figure className="mb-10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={n.cover} alt={t(n.title, lang)} className="mx-auto h-auto max-h-[80vh] w-auto max-w-full rounded-3xl object-contain shadow-lg shadow-black/30" />
+              {n.coverCaption && <figcaption className="mt-3 text-center text-sm text-dim">{t(n.coverCaption, lang)}</figcaption>}
+            </figure>
+          )}
           <p className="text-xl font-medium leading-relaxed text-white">{t(n.summary, lang)}</p>
           <div className="hairline my-8" />
           {t(n.body, lang)

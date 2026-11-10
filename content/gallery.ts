@@ -6,6 +6,20 @@ import type { Album, Video } from "@/lib/types";
  */
 export const albums: Album[] = [
   {
+    slug: "friends-gathering",
+    kind: "event",
+    title: { bn: "একাশিয়ান বন্ধুদের সমাবেশ", en: "Ekashian friends together" },
+    cover: "/gallery/friends-gathering/01.jpg",
+    photos: [{ src: "/gallery/friends-gathering/01.jpg", caption: { bn: "একাশিয়ান বন্ধুরা একসাথে", en: "Ekashian friends together" } }],
+  },
+  {
+    slug: "story-coaching-centre",
+    kind: "memories",
+    title: { bn: "৪১ বছর পর কোচিং সেন্টারে", en: "At the coaching centre, 41 years later" },
+    cover: "/stories/coaching-centre-panchlaish.webp",
+    photos: [{ src: "/stories/coaching-centre-panchlaish.webp", caption: { bn: "পাঁচলাইশে কোচিং সেন্টারের সামনে — ফরিদ উদ্দিন মাহমুদ (রঞ্জু)-এর পাঠানো ছবি", en: "Outside the coaching centre in Panchlaish — photo shared by Farid Uddin Mahmud (Ranju)" } }],
+  },
+  {
     slug: "our-chattogram",
     kind: "memories",
     title: { bn: "আমাদের চট্টগ্রাম", en: "Our Chattogram" },

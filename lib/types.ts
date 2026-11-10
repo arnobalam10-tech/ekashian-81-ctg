@@ -64,7 +64,7 @@ export type EventItem = {
   featured?: boolean;
 };
 
-export type NewsKind = "news" | "announcement" | "meeting" | "circular";
+export type NewsKind = "news" | "announcement" | "meeting" | "circular" | "story";
 export type NewsItem = {
   slug: string;
   kind: NewsKind;
@@ -73,6 +73,10 @@ export type NewsItem = {
   summary: L10n;
   body: L10n;
   cover?: string;
+  /** Shown under the cover image, e.g. photo credit */
+  coverCaption?: L10n;
+  /** Byline for stories shared by a member */
+  author?: L10n;
 };
 
 export type Notice = {

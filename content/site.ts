@@ -37,7 +37,7 @@ export const site = {
 
   /** Numbers shown on the home page. Leave null to hide. */
   stats: {
-    members: null as number | null,
+    members: 55 as number | null, // registered for Milonmela 2027 (9 Nov 2026) — keep in sync with content/registered.ts
     schools: null as number | null,
     districts: 11, // districts in Chattogram Division
   },

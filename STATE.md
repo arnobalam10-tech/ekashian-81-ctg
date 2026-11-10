@@ -1,6 +1,6 @@
 # STATE
 
-_Last updated: 2026-11-07_
+_Last updated: 2026-11-10_
 
 ## Decisions
 - Frontend only (no backend, no forms). Apply/register buttons go to **https://81an.agamievent.org** (the registration form; `content/site.ts → links`).
@@ -27,6 +27,12 @@ _Last updated: 2026-11-07_
 
 ## No dummy data policy (2026-11-08)
 The owner asked for **no dummy info**. All invented content was removed: sample members, invented events/news/notices, achievements, office hours, school counts, expected participants, invented perks. Wherever data is missing the site shows "তথ্য শীঘ্রই আসছে / Information coming soon". Only real data remains: the Milonmela 2027 details, fees, schedule, guidelines and admins (from 81an.agamievent.org), plus the organisation intro/vision/mission/future plans taken from the client's brief.
+
+## Update 2026-11-10
+- **Registered friends list** (55 names, published 9 Nov 2026) in `content/registered.ts`, shown on `/members` grouped by school (36 schools, A–Z, searchable). Add new names there each week. Names/schools are Bengali only (shown as published, also on `/en`). Home + Convention "Registered members" count = 55 (`site.stats.members`, `convention.registeredCount`).
+- **Alumni story** by Farid Uddin Mahmud (Ranju), SL 81AN-0015, added as a news item of new kind `story` (`content/news.ts`), with English translation, cover photo and byline. His phone number was deliberately NOT published.
+- Photos: story photo in `public/stories/`; second photo (men seated at a night event) added to the gallery as "Ekashian friends together" with a neutral caption because its event/date is unknown.
+- Open questions: confirm whether Gachbaria N.G. School (#5) and Gachbaria High School (#47) are the same school (kept separate as written); context/date of the gallery photo.
 
 ## Deployment
 - GitHub: https://github.com/arnobalam10-tech/ekashian-81-ctg (branch `main`)

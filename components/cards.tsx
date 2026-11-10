@@ -46,6 +46,12 @@ export function EventCard({ e, lang }: { e: EventItem; lang: Lang }) {
 export function NewsCard({ n, lang }: { n: NewsItem; lang: Lang }) {
   return (
     <Link href={href(lang, `/news/${n.slug}`)} className="card card-hover group flex h-full flex-col p-6">
+      {n.cover && (
+        <div className="relative -mx-6 -mt-6 mb-5 aspect-[16/9] overflow-hidden rounded-t-[inherit]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={n.cover} alt="" className="size-full object-cover object-top transition duration-700 group-hover:scale-105" />
+        </div>
+      )}
       <div className="flex items-center justify-between gap-3">
         <span className="rounded-full bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-200 ring-1 ring-brand-400/30">{t(NEWS_KIND_LABEL[n.kind], lang)}</span>
         <span className="flex items-center gap-1.5 text-sm text-dim">
