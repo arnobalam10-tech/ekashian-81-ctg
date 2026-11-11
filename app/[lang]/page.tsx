@@ -31,6 +31,7 @@ import HeroCollage from "@/components/HeroCollage";
 import Countdown from "@/components/Countdown";
 import RegTimeline from "@/components/RegTimeline";
 import Faq from "@/components/Faq";
+import RegisteredShowcase from "@/components/RegisteredShowcase";
 import { LogoMark } from "@/components/Logo";
 import { Atmosphere, Avatar, ButtonLink, IconBox, Pill, Section, SectionHead } from "@/components/ui";
 import { AdminCard, EventCard, NewsCard } from "@/components/cards";
@@ -233,6 +234,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           </div>
         </div>
       </section>
+
+      {/* ═════════════ REGISTERED FRIENDS ═════════════ */}
+      <RegisteredShowcase lang={lang} />
 
       {/* ═════════════ PRICING ═════════════ */}
       <Section>
